@@ -35,4 +35,24 @@ int main()
 		cout << nums[i] << " ";
 	}
 	cout << endl;
+
+	cout << "Reversed order:      ";
+	int n[SIZE];
+	for (int i = 0; i < SIZE; i++)
+		n[i] = nums[i];
+
+	for (int i = 0; i < SIZE; i++)
+	{
+		for (int j = 0; j < SIZE - i - 1; j++)
+			if (n[j] < n[j + 1])
+			{
+				int temp = n[j];
+				n[j] = n[j + 1];
+				n[j + 1] = temp;
+			}
+	}
+	for (int i = 0; i < SIZE; i++)
+		cout << n[i] << " ";
+	cout << endl;
+
 }
