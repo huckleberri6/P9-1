@@ -13,9 +13,16 @@ int main()
 
 	for (int i = 0; i < SIZE; i++)
 	{
-		int num = rand() % 10 + rand() % 100 + rand() % 1000 + rand() % 10000 - 1000;
+		int num = rand() % 10000;
 		nums[i] = num;
 		cout << nums[i] << " ";
 	}
+	cout << endl;
 
+	cout << "Even indicies:       ";
+	for (int i = 0; i < SIZE; i = i + 2)
+	{
+		cout << nums[i] << " ";
+	}
+	cout << endl;
 }
