@@ -13,7 +13,9 @@ int main()
 
 	for (int i = 0; i < SIZE; i++)
 	{
-		int num = rand() % 10000;
+		double num = rand() % 10000;
+		while (num < 1000)
+			num = rand() % 10000;
 		nums[i] = num;
 		cout << nums[i] << " ";
 	}
@@ -22,6 +24,14 @@ int main()
 	cout << "Even indicies:       ";
 	for (int i = 0; i < SIZE; i = i + 2)
 	{
+		cout << nums[i] << " ";
+	}
+	cout << endl;
+
+	cout << "Even values:         ";
+	for (int i = 0; i < SIZE; i++)
+	{
+		if (nums[i] % 2 == 0)
 		cout << nums[i] << " ";
 	}
 	cout << endl;
