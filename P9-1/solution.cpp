@@ -55,4 +55,8 @@ int main()
 		cout << n[i] << " ";
 	cout << endl;
 
+	cout << "First and last:      ";
+	cout << nums[0] << " " << nums[SIZE - 1];
+	cout << endl;
+
 }
